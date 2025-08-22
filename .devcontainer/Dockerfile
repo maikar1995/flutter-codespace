@@ -12,7 +12,8 @@ clang cmake ninja-build pkg-config libgtk-3-dev \
 
 # Instalar Flutter desde el canal estable
 ENV FLUTTER_HOME=/usr/local/flutter
-RUN git clone https://github.com/flutter/flutter.git -b stable ${FLUTTER_HOME}
+RUN git clone https://github.com/flutter/flutter.git -b stable ${FLUTTER_HOME} \
+ && chown -R vscode:vscode ${FLUTTER_HOME}
 ENV PATH="${FLUTTER_HOME}/bin:${PATH}"
 
 
