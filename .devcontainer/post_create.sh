@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
+# Asegura que el SDK está en PATH (instalado en HOME)
+export PATH="$HOME/.flutter/bin:$PATH"
 
-export PATH="/usr/local/flutter/bin:$PATH"
+# Seguridad para git (si la capa de build lo requiere)
+git config --global --add safe.directory "$HOME/.flutter" || true
 
-
-# Activar y precachear web
+# Doctor + habilitar web + precache (idempotente)
+flutter doctor -v || true
 flutter config --enable-web
 flutter precache --web
 
-
-# Crear proyecto de ejemplo si no existe
+# Crear el proyecto si no existe
 if [ ! -d "app" ]; then
-flutter create app
+  flutter create app
 fi
 
-
-# Mostrar estado
-flutter doctor -v || true
+echo "post_create listo"
