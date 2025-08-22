@@ -5,5 +5,5 @@
 "**/build/**": true
 },
 "dart.vmAdditionalArgs": ["--enable-asserts"],
-"dart.flutterSdkPath": "/usr/local/flutter"
+"dart.flutterSdkPath": "/home/vscode/.flutter"
 }
