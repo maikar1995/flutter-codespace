@@ -1,0 +1,11 @@
+{
+"version": "2.0.0",
+"tasks": [
+{
+"label": "Run Flutter (web-server)",
+"type": "shell",
+"command": "bash scripts/run_web.sh",
+"problemMatcher": []
+}
+]
+}

@@ -1,0 +1,9 @@
+{
+"files.watcherExclude": {
+"**/.dart_tool/**": true,
+"**/.git/**": true,
+"**/build/**": true
+},
+"dart.vmAdditionalArgs": ["--enable-asserts"],
+"dart.flutterSdkPath": "/usr/local/flutter"
+}
